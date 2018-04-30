@@ -28,4 +28,12 @@ object CarPrice {
 
     totalPrice
   }
+
+  def main(args: Array[String]): Unit = {
+    //0 - HATHBACK, 0 - DIESEL, 600000 - price of car before discount
+    println(s"price before discount = 600000")
+    val price = totalPrice(0, 0, 600000)
+    //prints 564000.0
+    println(s"price after discount = $price")
+  }
 }

@@ -1,7 +1,7 @@
 import CarType.CarType
 import FuelType.FuelType
 
-object Car {
+object CarPrice {
 
   val carTypeDiscount: (CarType, Double) => Double = (carType, price) => carType match {
     case CarType.HATCHBACK => price - price * 1 / 100

@@ -3,7 +3,7 @@ import FuelType.FuelType
 
 import scala.annotation.tailrec
 
-object Car {
+object CarPrice {
 
   val percentage: (Double, Double) => Double = (number, part) => {
     val whole = 100

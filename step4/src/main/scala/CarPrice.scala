@@ -1,4 +1,4 @@
-object Car {
+object CarPrice {
 
   type discountType = Double => Double
 

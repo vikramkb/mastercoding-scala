@@ -2,7 +2,7 @@ import CarType.CarType
 import FuelType.FuelType
 import org.scalatest.FunSpec
 
-class CarSpec extends FunSpec {
+class CarPriceSpec extends FunSpec {
   describe("Car") {
     describe("total price") {
 
@@ -14,12 +14,12 @@ class CarSpec extends FunSpec {
 
 
       it("test should apply hatchback discount for diesel type upper range cars") {
-        val price = Car.totalPrice(CarType.HATCHBACK, FuelType.DIESEL, 600000, carTypeDiscountMap, fuelTypeDiscountMap)
+        val price = CarPrice.totalPrice(CarType.HATCHBACK, FuelType.DIESEL, 600000, carTypeDiscountMap, fuelTypeDiscountMap)
         assert(price == 564000)
       }
 
       it("test should return same price in case no discounts applicable") {
-        val price = Car.totalPrice(CarType.HATCHBACK, FuelType.DIESEL, 600000)
+        val price = CarPrice.totalPrice(CarType.HATCHBACK, FuelType.DIESEL, 600000)
         assert(price == 600000)
       }
     }

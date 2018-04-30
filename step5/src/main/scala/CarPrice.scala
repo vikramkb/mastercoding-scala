@@ -1,4 +1,4 @@
-object Car {
+object CarPrice {
 
   type Money = Double
   val percentage: (Double, Double) => Double = (number, part) => {
