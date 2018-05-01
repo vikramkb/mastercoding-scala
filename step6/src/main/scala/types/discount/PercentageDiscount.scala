@@ -4,7 +4,7 @@ import money.Money
 
 class PercentageDiscount(val percentageDiscount: Double) extends DiscountType{
   override def calculate(price: Money): Money = {
-    price - price % percentageDiscount
+    price % percentageDiscount
   }
 }
 

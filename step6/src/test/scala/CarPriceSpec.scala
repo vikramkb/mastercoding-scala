@@ -12,13 +12,13 @@ class CarPriceSpec extends FunSpec {
       val categoryDiscountMap : Map[String, Map[String, DiscountStrategy]] =
         Map(
           ("FUELTYPE", Map(("DIESEL", PriceBreakStrategy(dieselDiscountBreak)))),
-          ("CARTYPE", Map(("HATCHBACK", SimpleStrategy(PercentageDiscount(1.0))
+          ("CARTYPE", Map(("HATCHBACK", SimpleStrategy(PercentageDiscount(10.0))
         ))))
 
       it("test should apply hatchback discount and diesel type upper range discounts") {
         val discountCategories = List(("CARTYPE","HATCHBACK"),("FUELTYPE", "DIESEL"))
         val price = CarPrice.totalPrice(Money(600000.0), discountCategories, categoryDiscountMap)
-        assert(564000.0 == price.money)
+        assert(510000.0 == price.money)
       }
     }
   }

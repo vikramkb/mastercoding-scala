@@ -4,7 +4,7 @@ import money.Money
 
 class FlatDiscount(val discountAmount: Money) extends DiscountType{
   override def calculate(price: Money): Money = {
-    price - discountAmount
+    discountAmount max (price % 1.0)
   }
 }
 
